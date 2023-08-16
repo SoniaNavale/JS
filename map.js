@@ -30,12 +30,11 @@ const p = [
 ];
 
 let newarray = p.map((item) => {
-  let user = JSON.parse(JSON.stringify(item));
+  let user = { ...item };
   if (user.isActive == false) {
-    console.log("here");
-    user.isActive = "Available";
-  } else {
     user.isActive = " Not Available";
+  } else {
+    user.isActive = " Available";
   }
   return user;
 });
