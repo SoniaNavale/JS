@@ -33,7 +33,9 @@ let newarray = p.map((item) => {
   let user = JSON.parse(JSON.stringify(item));
   if (user.isActive == false) {
     console.log("here");
-    user.isActive = "NAN";
+    user.isActive = "Available";
+  } else {
+    user.isActive = " Not Available";
   }
   return user;
 });
